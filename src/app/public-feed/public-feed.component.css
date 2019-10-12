@@ -1,0 +1,21 @@
+.fix {
+    margin: 1em 0;
+    text-align: center;
+    border: 2px solid black;
+  }
+  
+  .fix img {
+    width: 30vw;
+    height: 30vw;
+  }
+  
+  .fix-cover img {
+    object-fit: cover;
+  }
+  
+  .fix-contain img {
+    object-fit: contain;
+  }
+  .pad-4 {
+      padding-left: 4%;
+  }

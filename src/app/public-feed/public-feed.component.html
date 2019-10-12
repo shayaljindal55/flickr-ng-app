@@ -1,0 +1,17 @@
+<div *ngIf="loadHtml">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" [(ngModel)]="searchInput" class="form-control fix fix-cover" placeholder="Search Flickr Images">
+        </div>
+        <div class="col-md-12">
+            <div class="col text-center">
+                <button class="btn btn-dark btn-lg" (click)="getFlickrPictures()">Search</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="row pad-4">
+        <div class="fix fix-cover" *ngFor="let pic of photoArr; let i = index">
+            <img alt="image" src="{{pic.srcPath}}" /> </div>
+    </div>
+</div>
