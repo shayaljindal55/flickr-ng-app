@@ -10,8 +10,9 @@ export class PublicFeedService {
   private baseurl = environment.nodeServiceURL;
   getFlickrPictures(searchInput) {
     searchInput = searchInput ? searchInput : 'nyc';
+    const count = 50; // number of images to be retrived. configurable
     return new Promise((resolve, reject) => {
-      this.http.get(this.baseurl + 'public-feed/getFlickrPictures?searchInput=' + searchInput)
+      this.http.get(this.baseurl + 'publicFeed/getFlickrPictures?searchInput=' + searchInput + '&count=' + count)
         .subscribe(
           (data) => {
             resolve(data);

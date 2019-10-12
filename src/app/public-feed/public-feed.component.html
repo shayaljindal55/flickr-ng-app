@@ -1,16 +1,24 @@
 <div *ngIf="loadHtml">
-    <div class="row">
+    <!-- SEARCH SECTION -->
+    <!-- search-section is added only for identifying the search section in unit test -->
+    <div class="row search-section">
         <div class="col-md-12">
-            <input type="text" [(ngModel)]="searchInput" class="form-control fix fix-cover" placeholder="Search Flickr Images">
+            <!-- SERACH INPUT -->
+            <input type="text" [(ngModel)]="searchInput" class="form-control fix fix-cover"
+                placeholder="Search Flickr Images">
         </div>
+        <!-- SERACH BUTTON -->
         <div class="col-md-12">
             <div class="col text-center">
-                <button class="btn btn-dark btn-lg" (click)="getFlickrPictures()">Search</button>
+                <!-- search-btn is added only for identifying the search button in unit test -->
+                <button class="btn btn-dark btn-lg search-btn" (click)="getFlickrPictures()">Search</button>
             </div>
         </div>
 
     </div>
-    <div class="row pad-4">
+    <!-- GRID VIEW OF IMAGES FROM FLICKR -->
+    <!-- grid-view-flickr is added only for identifying the grid-view section in unit test -->
+    <div class="row pad-4 grid-view-flickr">
         <div class="fix fix-cover" *ngFor="let pic of photoArr; let i = index">
             <img alt="image" src="{{pic.srcPath}}" /> </div>
     </div>
